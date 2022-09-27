@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>adivinhação</title>
+	<link rel="stylesheet" href="./css/style.css">
+	<script src="https://kit.fontawesome.com/9dabb0ed4f.js"></script>
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+		crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+		crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<h1>Escolha a cor certa!!!!</h1>
+	<div class="container">
+		<div class="div__color" id="color__field-1" onclick="verificar('1')"></div>
+		<div class="div__color" id="color__field-2" onclick="verificar('2')"></div>
+		<div class="div__color" id="color__field-3" onclick="verificar('3')"></div>
+		<div class="div__color" id="color__field-4" onclick="verificar('4')"></div>
+		<div class="div__color" id="color__field-5" onclick="verificar('5')"></div>
+		<div class="div__color" id="color__field-6" onclick="verificar('6')"></div>
+	</div>
+
+	<div class="modal" id="myModal">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+
+				<!-- Modal Header -->
+				<div class="modal-header">
+					<h4 class="modal-title">ESCOLHA CERTA!!!!!!!</h4>
+					<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+				</div>
+
+				<!-- Modal body -->
+				<div class="modal-body">
+					<i class="fa-regular fa-circle-check "></i>
+				</div>
+
+				<!-- Modal footer -->
+				<div class="modal-footer">
+					<button type="button" class="btn btn-danger"
+						data-bs-dismiss="modal">Close</button>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<div class="modal" id="myModalDerrota">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+
+				<!-- Modal Header -->
+				<div class="modal-header">
+					<h4 class="modal-title">ESCOLHA ERRADA!!!!!!!! tente novamente</h4>
+					<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+				</div>
+
+				<!-- Modal body -->
+				<div class="modal-body">
+					<i class="fa-regular fa-circle-xmark"></i>
+				</div>
+
+				<!-- Modal footer -->
+				<div class="modal-footer">
+					<button type="button" class="btn btn-danger"
+						data-bs-dismiss="modal">Close</button>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="container mt-3">
+		<button type="button" class="btn btn-primary" id="btnModal" data-bs-toggle="modal"
+			data-bs-target="#myModal">
+			Open modal
+		</button>
+	</div>
+
+	<div class="container mt-3">
+		<button type="button" class="btn btn-primary" id="btnModalDerrota" data-bs-toggle="modal"
+			data-bs-target="#myModalDerrota">
+			Open modal
+		</button>
+	</div>
+	<script src="./js/script.js"></script>
+</body>
+
+</html>
